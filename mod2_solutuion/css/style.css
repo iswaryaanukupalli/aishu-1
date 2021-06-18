@@ -6,7 +6,7 @@ h1 {
 .section {
     border: solid 2px black;
     margin: 16px;
-    background-color: lightgray;
+    background-color: #aaa;
     position: relative;
 }
 
