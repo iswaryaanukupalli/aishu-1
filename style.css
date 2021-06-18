@@ -1,0 +1,74 @@
+h1 {
+    align-self: center;
+    text-align: center;
+}
+
+.section {
+    border: solid 2px black;
+    margin: 16px;
+    background-color: lightgray;
+    position: relative;
+}
+
+.section p {
+    margin: 16px;
+    margin-top: 36px;
+    font-weight: 400;
+}
+
+.section h2 {
+    margin: 0;
+    padding: 0 64px 0 64px;
+    border-left: solid 2px black;
+    border-bottom: solid 2px black;
+    text-align: center;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#section-1 h2 {
+    background-color: thistle;
+}
+#section-2 h2 {
+    background-color: darkkhaki;
+}
+#section-3 h2 {
+    background-color: wheat;
+}
+
+/* Desktop Version */
+@media (min-width: 992px) {
+    #sections-container {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* Tablet Version */
+@media (min-width: 768px) AND (max-width: 991px) {
+    .section:nth-child(1) {
+        grid-area: first;
+    }
+    .section:nth-child(2) {
+        grid-area: second;
+    }
+    .section:nth-child(3) {
+        grid-area: third;
+    }
+    #sections-container {
+        display: grid;
+        grid-template-rows: [row1-start] auto [row1-end row2-start] auto [row2-end];
+        grid-template-columns: auto auto;
+        grid-template-areas: "first second" "third third";
+    }
+}
+
+/* Mobile Version */
+@media (max-width: 767px) {
+    #sections-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
