@@ -1,0 +1,30 @@
+h1 {
+    font-weight: 700;
+}
+
+.col {
+    padding-left: 0;
+    padding-right: 0;
+}
+.col h3 {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px;
+}
+.col p {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.menu-section {
+    background-color: #ccc;
+    margin: 10px;
+}
+
+/* Mobile Version */
+@media (max-width: 767px) {
+    .menu-section {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
